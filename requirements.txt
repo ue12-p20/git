@@ -1,0 +1,19 @@
+# first we have the core requirements
+# i.e. libraries used for running 
+# code in the notebooks per se
+#
+ipykernel
+ipywidgets
+nbautoeval
+
+# jupyter extensions
+#
+#rise
+#jupyter-contrib-nbextensions
+
+# this part is for readthedocs
+#
+ipypublish[sphinx]
+sphinx-rtd-theme
+jupyter_client
+calysto_bash

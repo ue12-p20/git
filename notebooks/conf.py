@@ -43,8 +43,8 @@ ipysphinx_output_prompt = 'Out:'
 ipysphinx_input_toggle = True
 ipysphinx_output_toggle = True
 html_theme = "sphinx_rtd_theme" 
-html_title = "intro à Python" 
-project = "Python numérique"
+html_title = "intro à git" 
+project = "Intro à git"
 author = "Thierry Parmentelat & Valérie Roy"
 html_theme_options = {
     'display_version': False,

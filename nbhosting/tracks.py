@@ -14,16 +14,18 @@ def tracks(coursedir):
     """
 
     track_specs = [
-        ('cours #1: git', 'git',
-         [ 
-           ('introduction', 'notebooks/1-[0-8]*.md'),
-           ('checklist', 'notebooks/1-9*.md'),
+        ('cours #1: git', 'tutorial git', 'git',
+         [
+           ('quiz', 'notebooks/0*.md'),
+           ('git en local', 'notebooks/1*.md'),
+           ('git en réseau', 'notebooks/2*.md'),
+           ('devoir', 'notebooks/3*.md'),
          ]),
         ]
 
-    return [Track(coursedir, 
+    return [Track(coursedir,
                   [Section(coursedir=coursedir,
-                           name=section_name, 
+                           name=section_name,
                            notebooks=notebooks_by_pattern(
                                coursedir, pattern))
                    for section_name, pattern in section_specs],

@@ -16,7 +16,7 @@ def tracks(coursedir):
     track_specs = [
         ('cours #1: git', 'tutorial git', 'git',
          [
-           ('quiz', 'notebooks/0*.md'),
+#           ('quiz', 'notebooks/0*.md'),
            ('git en local', 'notebooks/1*.md'),
            ('git en réseau', 'notebooks/2*.md'),
            ('devoir', 'notebooks/3*.md'),

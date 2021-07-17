@@ -1,0 +1,21 @@
+tracks:
+- description: "tutorial git"
+  name: git
+  id: git
+  sections:
+  - name: git en local
+    notebooks: "notebooks/1*.md"
+  - name: git en réseau
+    notebooks: "notebooks/2*.md"
+
+builds:
+  - id: handouts
+    name: static html
+    description: searchable static html as produced by jupyter-book
+    directory: notebooks
+    script: |
+      pip install jupyter-book
+      jupyter-book build .
+
+static-mappings:
+

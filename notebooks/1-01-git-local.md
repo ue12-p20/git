@@ -51,20 +51,17 @@ Le projet va être initié, à un instant, puis il va évoluer dans le temps au 
 
 Depuis que le code existe les programmeurs ont plusieurs problèmes, parmi les plus répandus:
 
-  - ne pas *perdre* leurs fichiers *localement* en les écrasant ou en les détruisant involontairement (oui on a tous fait cela au moins une fois...)
+  - ne pas *perdre* les fichiers *localement* en les écrasant ou en les détruisant involontairement (oui on a tous fait cela au moins une fois...)
 
 
-  - pouvoir *revenir* en arrière dans des versions précédentes de leurs fichiers.  
-  Par exemple les évolutions qu'ils ont faites ne les satisfont pas. Ou encore un de leurs *clients* utilise une ancienne version du logiciel dont il tellement content (la version est bien *stable*, les fonctionnalités lui suffisent) qu'il ne veut pas passer à la nouvelle version de votre logiciel ... mais il voudrait quand même, sur *sa* version, une petite modification. Le client est toujours exigeant. C'est d'ailleurs au moment où vous avez des utilisateurs que les ennuis commencent (mais heu non, on ne peut pas se passer des utilisateurs).
-  
+- pouvoir *revenir* en arrière dans des versions précédentes de vos fichiers;
+Par exemple les évolutions que vous avez commencées sont cassées, c'était une mauvaise idée. Ou encore un de vos *clients* utilise une ancienne version du logiciel dont il est tellement content (la version est bien *stable*, les fonctionnalités lui suffisent) qu'il ne veut pas passer à la nouvelle version de votre logiciel ... mais il voudrait quand même, sur *sa* version, une petite modification. Le client est toujours exigeant. C'est d'ailleurs au moment où vous avez des utilisateurs que les ennuis commencent (mais heu non, on ne peut pas se passer des utilisateurs).
 
-  - héberger leurs projets à l'extérieur de leur ordinateurs (sur serveur distant, sur Internet, sur leur réseau local)
-  
+- héberger vos projets à l'extérieur de leur ordinateurs (sur serveur distant, sur Internet, sur leur réseau local)
 
-  - travailler en équipe (oui c'est parfois aussi un problème pour les développeurs...)
-  
+- travailler en équipe (oui c'est parfois aussi un problème pour les développeurs...)
 
-  - permettre à tout le monde d'utiliser leurs programmes, ou d'y apporter leur contribution, même à des gens qu'on ne connait pas a priori
+- permettre à tout le monde d'utiliser leurs programmes, ou d'y apporter leur contribution, même à des gens qu'on ne connait pas a priori
 
 +++
 
@@ -72,16 +69,16 @@ Depuis que le code existe les programmeurs ont plusieurs problèmes, parmi les p
 
 +++
 
-Les programmeurs sont très souvent amenés à travailler en équipe sur un même projet. Il y a là plusieurs possibilités:
+Les programmeurs sont très souvent amenés à travailler en équipe sur un même projet. Il y
+a là plusieurs possibilités:
 
-   1. Les rôles sont bien séparés. Les personnes travaillent sur des fichiers complètement différents. Par exemple, l'un fait le code et l'autre fait la documentation. Rien de compliqué là pour gérer l'évolution de votre projet: les fichiers sont parfaitement séparés.
-
-
-   1. Les rôles sont moins bien séparés. Les personnes sont amenées à intervenir dans le même fichier à des endroits bien séparés. C'est un peu plus compliqué, mais ca reste possible, en effet: les modifications peuvent être fusionnées *automatiquement* dans un nouveau fichier, sans intervention de personne.
+ 1. Les rôles sont bien séparés. Les personnes travaillent sur des fichiers complètement différents. Par exemple, l'un fait le code et l'autre fait la documentation. Rien de compliqué là pour gérer l'évolution de votre projet: les fichiers sont parfaitement séparés.
 
 
-   1. Vous vous en doutez: les personnes ont travaillé dans le même fichier aux mêmes endroits et leurs modifications se chevauchent (c'est fréquent voire habituel, ce n'est pas du tout un cas isolé provenant d'une configuration de travail dégénérée). Il n'est naturellement plus possible de construire automatiquement un fichier contenant le travail de ces personnes sans une intervention *humaine*. Nous ressentons alors le besoin de lister les différences entre les fichiers.
+ 2. Les rôles sont moins bien séparés. Les personnes sont amenées à intervenir dans le même fichier à des endroits bien séparés. C'est un peu plus compliqué, mais ca reste possible, en effet: les modifications peuvent être fusionnées *automatiquement* dans un nouveau fichier, sans intervention de personne.
 
+
+ 3. Vous vous en doutez: les personnes ont travaillé dans le même fichier aux mêmes endroits et leurs modifications se chevauchent (c'est fréquent voire habituel, ce n'est pas du tout un cas isolé provenant d'une configuration de travail dégénérée). Il n'est naturellement plus possible de construire automatiquement un fichier contenant le travail de ces personnes sans une intervention *humaine*. Nous ressentons alors le besoin de lister les différences entre les fichiers.
 
 Notons, qu'il peut vous arriver aussi, en travaillant *tout seul*, de travailler *en même temps* sur plusieurs souches  de votre code (on parlera alors de branches). Par exemple, vous avez cloisonné dans différentes branches de votre code la programmation de fonctionnalités très différentes. Pour *réconcilier* ensuite toutes ces branches, vous avez besoin vous aussi d'outils de *fusion automatique* des modifications, avec la même réserve lorsque deux branches ont eu un impact sur la même zone de code.
 
@@ -91,7 +88,7 @@ Notons, qu'il peut vous arriver aussi, en travaillant *tout seul*, de travailler
 
 +++
 
-Vous avez compris, quel que soit le niveau de ce que vous faites dans votre projet logiciel, vous n'allez **pas** gérer à-la-main toutes ces choses. Quand vous êtes seul sur votre code ca va déjà être compliqué, mais à plusieurs c'est une hérésie (on pèse les mots): vous n'allez quand même pas vous envoyer vos modifications par e_mails ! Vous le faites ? Et bien raison de plus pour bien suivre ce cours...
+Vous avez compris, quel que soit le niveau de ce que vous faites dans votre projet logiciel, vous n'allez **pas gérer à-la-main** toutes ces choses. Quand vous êtes seul sur votre code ca va déjà être compliqué, mais à plusieurs c'est une hérésie (on pèse les mots): vous n'allez quand même pas vous envoyer vos modifications par e_mails ! Vous le faites ? Et bien raison de plus pour bien suivre ce cours...
 
 +++
 
@@ -104,6 +101,7 @@ Et c'est de `git` que nous allons vous parler ici.
 +++
 
 `git` va nous permettre de *consigner* les modifications apportées à un fichier ou à un ensemble de fichiers au cours du temps, et ceci de manière à :
+
 - conserver toutes les traces du développement d'un projet,
 - ajouter à la notion de *fichier/contenu*, les dimensions de "*temps*" et de "*qui a fait quoi, comment et pourquoi*".
 
@@ -120,6 +118,7 @@ Notre objectif pour l'instant est d'utiliser `git` **en local seulement**.
 +++
 
 Vous allez commencer la réalisation d'un petit projet logiciel:
+
 * Lancez un terminal `bash`
 * Créez le répertoire `my-first-project`
 * Allez dans ce répertoire.
@@ -257,7 +256,8 @@ $ ls -a
 .		..		.git		licence.txt	readme.md
 ```
 
-qui nous montre plusieurs entrées de plus que `ls` tout court :
+qui nous montre plusieurs entrées de plus que `ls` tout court:
+
 1. `.` c'est le répertoire courant,
 1. `..` est son répertoire parent, et
 1. `.git` est le répertoire de travail de `git`
@@ -355,6 +355,7 @@ git add licence.txt
 À votre avis que va vous afficher `git status` à ce stade ? commencez par réfléchir, puis essayez sur votre ordi.
 
 vous devez voir :
+
 * qu'on n'a toujours pas de commit, bien sûr
 * que les deux fichiers fichiers apparaissent maintenant en vert dans la section *Changes to be committed*
 * et enfin qu'il n'y a plus de *untracked files*
@@ -370,6 +371,7 @@ vous devez voir :
 Maintenant on va créer notre premier **commit**.
 
 Le principe du contenu d'un `git commit`:
+
 * il va contenir tout ce qu'il y avait dans le commit précédent (bon nous ici, c'est un contenu vide...),
 * plus ce qu'on a donné à la (ou les) commande(s) `git add` entretemps
 
@@ -381,7 +383,10 @@ Il va nous falloir **fournir un message** qui explique à quoi correspond ce com
 
 Donc nous y voilà, `git` a une commande `commit` à laquelle on va indiquer le message avec l'argument `-m`.
 
-Notons qu'on peut aussi utiliser `git commit` sans l'argument `-m`. Auquel cas un éditeur va s'ouvrir pour saisir le message. Notez qu'on peut indiquer un autre éditeur comme par exemple `truc` avec la commande `git config --global core.editor "truc"`) .
+Notons qu'on peut aussi utiliser `git commit` sans l'argument `-m`. Auquel cas un éditeur
+va s'ouvrir pour saisir le message. Notez qu'on peut choisir (une bonne fois pour toutes)
+un autre éditeur comme par exemple `truc` avec la commande `git config --global
+core.editor "truc"`) .
 
 Depuis le notebook c'est plus simple de donner le commentaire sur la ligne de commande.
 
@@ -417,14 +422,19 @@ nothing to commit, working tree clean
 
 +++ {"cell_style": "split"}
 
-Revoilà ce terme de **branch master**. Nous pouvons maintenant expliquer plus en avant: une **branch** est une **référence vers un commit** i.e. *elle nous indique un commit*, on pourrait dire aussi quelque chose comme *elle pointe vers un commit*.
+Revoilà ce terme de **branch master**. Nous pouvons maintenant expliquer plus en avant:
+une **branch** est une **référence vers un commit** i.e. *elle nous indique un commit*, on
+pourrait dire aussi quelque chose comme *elle pointe vers un commit*.
 
-Avec `git` on a **toujours** la notion de **branche courante** pour savoir où on travaille.
-À l'**initialisation** d'un dépôt la **branche courante** porte par convention le nom de **`master`**.
+Avec `git` on a **toujours** la notion de **branche courante** pour savoir où on
+travaille. À l'**initialisation** d'un dépôt la **branche courante** porte par convention
+le nom de **`master`** (ou plus récemment, **`main`**)
 
-D'autre part quand vous créez un commit, la branche courante "avance" pour désigner le nouveau commit.
+D'autre part quand vous créez un commit, la branche courante "avance" pour désigner le
+nouveau commit.
 
-Donc dans notre cas, et tant qu'on ne crée pas de nouvelle branche, `master` va toujours désigner le dernier commit.
+Donc dans notre cas, et tant qu'on ne crée pas de nouvelle branche, `master` va toujours
+désigner le dernier commit.
 
 +++ {"cell_style": "split"}
 
@@ -634,7 +644,7 @@ On calcule rapidement:
   - on a $40$ caractères hexadécimaux
   - ça fait donc $40*4$ bits, donc $2^{160}$ *hash* (nombres) différents
   - on est dans l'ordre de $10^{50}$.
-  
+
 C'est tellement grand, qu'en général, 7 caractères suffisent à disambigüer les commits dans un dépôt (donc $2^{7*4} = 2^{28} = 268.435.456$ suites de 7 digits hexadécimaux). Aussi souvent, on ne considèrera que les $7$ premiers caractères du sha-1.
 
 +++
@@ -738,7 +748,7 @@ $ git log --oneline
 e2c02ca (HEAD -> master) première implémentation de factorielle dans le fichier fact.py
 31c4816 informations sur la licence
 01b0604 licence+readme
-$ 
+$
 ```
 
 +++
@@ -770,14 +780,14 @@ echo "Licence machin truc chose, Prénom Nom" > licence.txt
 # on a initialisé notre repository git
 git init
 
-##### 1-er commit    
+##### 1-er commit
 # on a ajouté les fichiers readme.md et licence.txt dans l'index
 git add readme.md licence.txt
 
 # on a créé notre premier commit
 git commit -m"licence+readme"
 
-##### 2-ème commit    
+##### 2-ème commit
 # on a modifié le fichier readme.md
 echo "la licence d'utilisation est dans le fichier licence.txt" >> readme.md
 # on l'a ajouté dans l'index
@@ -796,7 +806,7 @@ git add licence.txt
 # on a créé un second commit (sans mettre fact.py)
 git commit -m"informations sur la licence"
 
-##### 3-ème commit    
+##### 3-ème commit
 # on a ajouté fact.py dans l'index
 git add fact.py
 
@@ -854,7 +864,7 @@ Savoir les différences à propos d'un fichier que vous modifiez (comme `fact.py
 Du fait de la présence de l'`index`, il y a deux classes de différences
 
 * celles entre les fichiers et l'index
-* celles entre l'index et le commit courant  
+* celles entre l'index et le commit courant
 (les commits sont tous dans le repo)
 
 la commande `git diff` vient en deux versions (avec ou sans l'argument `--cached`) qui permettent de montrer ces deux classes de différences
@@ -1245,7 +1255,7 @@ def fact (n):
 
 À ce stade, il est crucial de bien faire la différence entre:
 * les **fichiers** présents dans le répertoire, qui appartiennent à ce qu'on va appeller notre *espace de travail*
-* les **commits** qui appartiennent quant à eux au **repository**  
+* les **commits** qui appartiennent quant à eux au **repository**
 (concrètement ils sont dans le répertoire `.git`)
 
 +++
@@ -1319,12 +1329,12 @@ Donc ce qu'il faut remarquer, c'est
 
 * en premier que **nos fichiers ont changé** - ici `fact.py` est revenu en arrière
 * en second, c'est **`devel` qui est désormais la branche courante**, comme le montrent `git branch` et `git log`
-* la référence **`HEAD`** désigne maintenant notre **avant-dernier commit**  
+* la référence **`HEAD`** désigne maintenant notre **avant-dernier commit**
 mais sinon bien entendu aucune branche n'a bougé
 
 +++ {"tags": ["level_intermediate"]}
 
-pour information, la séquence qui consiste à 
+pour information, la séquence qui consiste à
 
 * créer une nouvelle branche
 * et l'adopter comme branche courante
@@ -1368,15 +1378,15 @@ https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 À vous de jouer:
 
-On vous laisse le soin de créer un commit comme on l'a appris jusqu'ici;  
-n'hésitez pas à utiliser `git status` et `git diff` au fur et à mesure en cas de besoin;  
+On vous laisse le soin de créer un commit comme on l'a appris jusqu'ici;
+n'hésitez pas à utiliser `git status` et `git diff` au fur et à mesure en cas de besoin;
 pour ma part j'ai mis `licence CC` comme message de commit, et voici ce que j'obtiens
 
 ```bash
 $ git log --all --oneline --graph
 * bda7835 (HEAD -> devel) licence CC
 | * afec18a (master) une implémentation plus juste de la fonction factorielle
-|/  
+|/
 * e2c02ca première implémentation de factorielle dans le fichier fact.py
 * 31c4816 informations sur la licence
 * 01b0604 licence+readme
@@ -1395,7 +1405,7 @@ c'est ici que vous pouvez commencer à voir en pratique l'intérêt de la notion
 * à part ça, toute la logique qu'on avait vue :
   * le commit est créé au dessus du commit courant
   * la branche courante suit le nouveau commit
-  * les autres branches sont inertes  
+  * les autres branches sont inertes
   est toujours à l'oeuvre à l'identique
 
 +++
@@ -1421,7 +1431,7 @@ quelques précisions :
 * ici pour la simplicité du scénario, chacun des deux chemins n'implique qu'un seul commit, mais ce n'est pas du tout une limitation
 * les commits pourraient aussi bien concerner plein de fichiers, avec des renommages, des ajouts, des suppressions de fichier, la mécanique est la même
 * par contre, on voit bien que **si les deux branches modifient le même bout de code** mais de façon différente, la procédure automatisée de fusion va rencontrer un problème, car elle ne va pas pouvoir décider quelle est la "bonne" version à conserver
-* dans ce cas on dit qu'**il y a un conflit** au moment de la fusion (merge); 
+* dans ce cas on dit qu'**il y a un conflit** au moment de la fusion (merge);
 
 nous ici on s'est arrangés (en modifiant des fichiers différents) pour que ça ne nous arrive pas; mais on en reparlera plus tard
 
@@ -1433,7 +1443,7 @@ reprenons; nous sommes toujours sur la branche `devel`. Vérifions le avec `git 
 $ git status
 On branch devel
 nothing to commit, working tree clean
-$ 
+$
 
 ```
 
@@ -1442,11 +1452,11 @@ $
 Si nous voulons fusionner `devel` avec `master`. Nous allons utiliser la commande suivante `git merge master` mais avant de la taper, lisez pour bien comprendre ce que ca va faire:
 
 * on **crée un nouveau commit**
-* parce que le commit est produit par un `merge`, il va **avoir deux parents**  
-  le premier est le commit courant `HEAD`, le second est celui référencé par `master` 
-* comme d'habitude nous allons rester sur la branche `devel` qui est la branche courante  
+* parce que le commit est produit par un `merge`, il va **avoir deux parents**
+  le premier est le commit courant `HEAD`, le second est celui référencé par `master`
+* comme d'habitude nous allons rester sur la branche `devel` qui est la branche courante
   et donc **`devel` va avancer d'un cran**
-* et comme d'habitude puisque `master` n'est pas la branche courante  
+* et comme d'habitude puisque `master` n'est pas la branche courante
   **`master` reste sur place**
 
 Donc toujours avant de taper la commande, pouvez-vous imaginer à quoi va ressembler la sortie de `git log` après le merge ?
@@ -1463,13 +1473,13 @@ $ git merge master -m"mon premier merge"
 Merge made by the 'recursive' strategy.
  fact.py | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)
- 
+
 $ git log --all --oneline --graph
 *   725be46 (HEAD -> devel) mon premier merge
-|\  
+|\
 | * afec18a (master) une implémentation plus juste de la fonction factorielle
 * | bda7835 licence CC
-|/  
+|/
 * e2c02ca première implémentation de factorielle dans le fichier fact.py
 * 31c4816 informations sur la licence
 * 01b0604 licence+readme
@@ -1491,7 +1501,7 @@ git diff devel master
 
 pour les curieux, je vous invite à vérifier que tout s'est bien passé; et pour ça on peut utiliser `git diff` à nouveau, mais entre plusieurs commits (faire `git diff --help` pour plus d'information)
 
-on pourrait vérfier par exemple que 
+on pourrait vérfier par exemple que
 ```
 git diff HEAD^ HEAD
 ```

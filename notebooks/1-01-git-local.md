@@ -468,7 +468,7 @@ git add readme.md
 
 Maintenant on va **attendre un peu avant de faire `git commit`**.
 
-Au contraire on va modifier localement `licence.md`, et pour bien illustrer l'état de mon dépôt, je ne le rajoute **pas** au commit courant.
+Au contraire on va modifier localement `licence.txt`, et pour bien illustrer l'état de mon dépôt, je ne le rajoute **pas** au commit courant.
 
 ```bash
 echo "la licence sera spécifiée ultérieurement" >> licence.txt
@@ -875,7 +875,7 @@ la commande `git diff` vient en deux versions (avec ou sans l'argument `--cached
 
 Expérimentons cela
 
-Regardons d'abord ce que donne `git diff` sur le fichier `readme.txt`, auquel on n'a pas touché, et qui donc est identique dans le répertoire, dans l'index et dans le commit (courant, on va commencer à ne plus répéter le mot à chaque fois que ce sera implicite) :
+Regardons d'abord ce que donne `git diff` sur le fichier `readme.md`, auquel on n'a pas touché, et qui donc est identique dans le répertoire, dans l'index et dans le commit (courant, on va commencer à ne plus répéter le mot à chaque fois que ce sera implicite) :
 
 ```bash
 git diff readme.md
@@ -1192,7 +1192,7 @@ Pour faire cela, `git` nous oblige à:
 * **créer une nouvelle branche**, et
 * **changer de branche** pour aller sur la nouvelle branche.
 
-Voyons ça pas à pas. Nous considérons que votre répertoire local est à jour avec le ernier commit.
+Voyons ça pas à pas. Nous considérons que votre répertoire local est à jour avec le dernier commit.
 
 +++
 

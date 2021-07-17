@@ -26,3 +26,5 @@ calysto_bash
 # pin panflute to avoid this mysterious-looking error in readthedocs build
 # TypeError: ('invalid api version', [1, 17, 0, 5])
 panflute==1.12
+# jinja2.exceptions.UndefinedError: 'nbformat.notebooknode.NotebookNode object' has no attribute 'widgets'
+jinja2<3.0

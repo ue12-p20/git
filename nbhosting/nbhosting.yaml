@@ -17,5 +17,5 @@ builds:
       pip install jupyter-book
       jupyter-book build .
 
-static-mappings:
+static-mappings: []
 

@@ -86,7 +86,7 @@ et du coup dans ce cas de figure, la fusion **n'a même pas besoin de créer un 
 
 la règle qui permet de savoir si on est, ou pas, dans le cas d'un *fast-forward*, est simple :  
 **s'il existe une chaine de parenté** entre les deux commits (celui ou on est, et celui qu'on veut fusionner),  
-alors on est dans un*fast-forward*, il n'est pas besoin de créer un commit, il en existe déjà un qui matérialise la fusion
+alors on est dans un *fast-forward*, il n'est pas besoin de créer un commit, il en existe déjà un qui matérialise la fusion
 
 ici dans le premier exemple on avait `to-merge=C → B → HEAD=A`, donc pas besoin de créer un commit, simplement besoin d'avancer la branche courante.
 
@@ -270,7 +270,7 @@ ce qui se passe, c'est ceci
 <img src="media/merge-conflict.png" width="600px" />
 
 * les changements faits dans la zone "chacun chez soi" peut être fusionnés sans souci
-* par contre comme les deux branches ont modifié la ligne de total chacune de leur coté, **la fusion ne sait pas quelle version retenir**
+* par contre comme les deux branches ont modifié la ligne de total chacune de leur côté, **la fusion ne sait pas quelle version retenir**
 
 +++ {"tags": ["level_intermediate"]}
 

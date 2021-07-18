@@ -1,4 +1,4 @@
----
+--
 jupytext:
   cell_metadata_filter: all,-hidden,-heading_collapsed
   notebook_metadata_filter: all,-language_info,-toc,-jupytext.text_representation.jupytext_version,-jupytext.text_representation.format_version
@@ -96,7 +96,7 @@ clairement le fait de travailler en équipe, et donc d'être en situation de lir
 
 ### une ligne de synthèse + une ligne blanche + du baratin
 
-Dernier détail, ça varie selon les projets, mais il un usage assez répandu consiste à rédiger son message en mettant
+Dernier détail, ça varie selon les projets, mais un usage assez répandu consiste à rédiger son message en mettant
 
 * une ligne de synthèse
 * une ligne blanche pour bien séparer

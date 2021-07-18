@@ -51,7 +51,7 @@ Notez que même dans ce cadre délibérément limité, `git` remplit déjà plei
 
 ### en réseau
 
-mais bien sûr, on l'a vu dans les slides d'introduction, on peut aussi utiliser git pour du travailler à plusieurs
+mais bien sûr, on l'a vu dans les slides d'introduction, on peut aussi utiliser git pour travailler à plusieurs
 
 <img src="media/synchro-overview.png" width="800px">
 
@@ -199,7 +199,7 @@ la troisième chose à retenir est que, puisque `pull` finit par faire un `merge
 
 * premier cas (comme dans la vidéo) si le commit qui vient de l'*upstream* est un enfant de mon commit (donc en gros, si je n'ai pas créé de commit depuis la dernière fois que j'étais à jour), le merge va se faire en mode *fast-forward*, on n'a pas besoin de créer un commit de fusion, je me retrouve au même commit que le remote 
 
-* par contre, si entre temps j'avais fait un commit de mon coté, alors là le merge va créer un commit de fusion; ça va sans dire, mais forcément le commit de fusion est créé **dans mon dépôt** hein, forcément, on est en train de faire un `pull`, on n'est pas du tout en train d'essayer de toucher au dépôt distant (dans lequel, de toutes façons, on n'a pas forcément le droit d'écrire en plus)
+* par contre, si entre temps j'avais fait un commit de mon côté, alors là le merge va créer un commit de fusion; ça va sans dire, mais forcément le commit de fusion est créé **dans mon dépôt** hein, forcément, on est en train de faire un `pull`, on n'est pas du tout en train d'essayer de toucher au dépôt distant (dans lequel, de toutes façons, on n'a pas forcément le droit d'écrire en plus)
 
 <video width="800px" controls src="media/PullDiverge.mp4" type="video/mp4"></video>
 

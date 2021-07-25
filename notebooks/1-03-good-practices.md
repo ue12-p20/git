@@ -6,9 +6,9 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Calysto Bash
-  language: bash
-  name: calysto_bash
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 notebookname: bonnes pratiques
 version: '1.0'
 ---
@@ -19,11 +19,10 @@ version: '1.0'
     <span>Thierry Parmentelat</span>
     <span>Valérie Roy</span>
 </div>
-<div style="display:grid">
-    <span><img src="media/inria-25-alpha.png" /></span>
-    <span><img src="media/ensmp-25-alpha.png" /></span>
 </div>
-</div>
+
+<img src="media/inria-25-alpha.png" />
+<img src="media/ensmp-25-alpha.png" />
 
 +++
 

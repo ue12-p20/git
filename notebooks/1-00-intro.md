@@ -16,13 +16,10 @@ version: '1.0'
 
 <div class="licence">
 <span>Licence CC BY-NC-ND</span>
-<div style="display:grid">
-    <span>Thierry Parmentelat</span>
+<span>Thierry Parmentelat</span>
 </div>
-<div style="display:grid">
-    <span><img src="media/inria-25-alpha.png" /></span>
-</div>
-</div>
+
+<img src="media/inria-25-alpha.png" />
 
 +++
 

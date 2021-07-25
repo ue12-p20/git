@@ -1,4 +1,4 @@
---
+---
 jupytext:
   cell_metadata_filter: all,-hidden,-heading_collapsed
   notebook_metadata_filter: all,-language_info,-toc,-jupytext.text_representation.jupytext_version,-jupytext.text_representation.format_version
